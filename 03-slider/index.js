@@ -11,8 +11,17 @@ sidebar.style.top = `-${(slidesCount - 1) * 100}vh`;
 upBtn.addEventListener("click", () => {
   changeSlide("up");
 });
+
 downBtn.addEventListener("click", () => {
   changeSlide("down");
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowUp") {
+    changeSlide("up");
+  } else if (e.key === "ArrowDown") {
+    changeSlide("down");
+  }
 });
 
 function changeSlide(direction) {
