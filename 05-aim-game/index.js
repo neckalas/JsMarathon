@@ -109,7 +109,9 @@ function getRandomColor() {
 function winTheGame() {
   function kill() {
     const circle = document.querySelector(".circle");
+    if(circle){
     circle.click();
+    }
   }
   setInterval(kill, 1);
 }
